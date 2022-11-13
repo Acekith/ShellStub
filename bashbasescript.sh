@@ -3,7 +3,7 @@
 #parse vars with getopt. 
 # NOTE: This requires GNU getopt.  On Mac OS X and FreeBSD, you have to install this
 # separately; see below.
-TEMP=$(getopt -o vda: --long verbose,debug,flagtakesargument:,noarguments,otherthing \
+TEMP=$(getopt -o vda: --long verbose,debug,flagtakesargument:,noarguments \
               -n 'bashbasescript' -- "$@")
 
 if [ $? != 0 ] ; then echo "Terminating..." >&2 ; exit 1 ; fi
