@@ -30,3 +30,16 @@ done
 
 # -- catches long flags without anything after them and move to next.
 # * catches all flags given that are not supported. 
+
+
+# Test if URL is reachable
+
+if curl -sL --fail http://google.com -o /dev/null; then
+    # do thing on success / if URL is reachable
+    echo "Success"
+else
+    echo "Fail"
+    # do thing on failure / if URL is not reachable
+fi
+
+
